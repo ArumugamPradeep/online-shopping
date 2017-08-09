@@ -1,6 +1,5 @@
 
-<div class="container">
-	<div class="row">
+
 
 		<!-- Header Carousel -->
 		<header id="myCarousel" class="carousel slide">
