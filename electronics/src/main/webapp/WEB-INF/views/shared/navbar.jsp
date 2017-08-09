@@ -16,9 +16,9 @@
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href=" ${contextRoot}/about">About</a></li>
-				<li><a href=" ${contextRoot}/listProducts">View Products</a></li>
-				<li><a href=" ${contextRoot}/contact">Contact</a></li>
+				<li id="about"><a href=" ${contextRoot}/about">About</a></li>
+				<li id="listProducts"><a href=" ${contextRoot}/listProducts">View Products</a></li>
+				<li id="contact"><a href=" ${contextRoot}/contact">Contact</a></li>
 				
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Blog <b class="caret"></b></a>
@@ -33,3 +33,43 @@
 	</div>
 	<!-- /.container -->
 </nav>
+  <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 1</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 2</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
