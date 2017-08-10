@@ -22,7 +22,11 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Electronics Shopping site - ${title} </title>
+<title>Electronics Shopping site - ${title}</title>
+
+<script>
+	window.menu = ' ${title}';
+</script>
 
 <!-- Bootstrap Core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
@@ -40,13 +44,14 @@
 </head>
 
 <body>
+	<div class="wrapper">
+		<!-- Navigation -->
+		<%@ include file="./shared/navbar.jsp"%>
 
-	<!-- Navigation -->
-	<%@ include file="./shared/navbar.jsp"%>
 
-
-	<!-- Page Content -->
-	<!-- loading the home content -->
+		<!-- Page Content -->
+		<div class="content">
+			<!-- loading the home content -->
 			<c:if test="${userClickHome == true }">
 				<%@include file="home.jsp"%>
 			</c:if>
@@ -60,17 +65,23 @@
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
 			</c:if>
-			
-	<!-- /.footer -->
-	<%@ include file="./shared/footer.jsp"%>
+		</div>
+		
+		
+		<!-- /.footer -->
+		<%@ include file="./shared/footer.jsp"%>
 
 
-	<!-- jQuery -->
-	<script src="${js}/jquery.js"></script>
+		<!-- jQuery -->
+		<script src="${js}/jquery.js"></script>
 
-	<!-- Bootstrap Core JavaScript -->
-	<script src="${js}/bootstrap.min.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="${js}/bootstrap.min.js"></script>
 
+		<!-- self coded -->
+		<script src="${js}/myapp.js"></script>
+
+	</div>
 </body>
 
 </html>
