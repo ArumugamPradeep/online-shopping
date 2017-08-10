@@ -16,8 +16,12 @@
 
 	<dependencies>
 		<!-- Linking backend -->
+		<dependency>
+			<groupId>kan</groupId>
+			<artifactId>electronicsbackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		
-
 		<!-- javaee api -->
 		<dependency>
 			<groupId>javax</groupId>

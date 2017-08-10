@@ -11,7 +11,9 @@
    	">
 
 	<context:component-scan base-package="kan.electronics.controller" />
-
+    <context:component-scan base-package="kan.electronicsbackend.daoimpl" />
+    
+    
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 
