@@ -42,7 +42,7 @@ public class HibernateConfig {
 
 		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
 		builder.addProperties(getHibernateProperties());
-		builder.scanPackages("chintu.shopbackend.dto");
+		builder.scanPackages("kan.electronicsbackend.dto");
 
 		return builder.buildSessionFactory();
 	}
