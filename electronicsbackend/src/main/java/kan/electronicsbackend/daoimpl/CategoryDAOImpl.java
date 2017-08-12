@@ -18,7 +18,6 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	
 	@Override
 	public List<Category> list() {
 		// TODO Auto-generated method stub
@@ -27,12 +26,12 @@ public class CategoryDAOImpl implements CategoryDAO {
 
 	@Override
 	public Category get(int id) {
-		return sessionFactory.getCurrentSession().get(Category.class, Integer.valueOf(id) );
+		return sessionFactory.getCurrentSession().get(Category.class, Integer.valueOf(id));
 
 	}
 
 	@Override
-	
+
 	public boolean add(Category category) {
 		// TODO Auto-generated method stub
 		try {
@@ -49,8 +48,16 @@ public class CategoryDAOImpl implements CategoryDAO {
 
 	@Override
 	public boolean update(Category category) {
-		// TODO Auto-generated method stub
-		return false;
+		try {
+
+			sessionFactory.getCurrentSession().update(category);
+			return true;
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			return false;
+		}
+ 
+
 	}
 
 	@Override

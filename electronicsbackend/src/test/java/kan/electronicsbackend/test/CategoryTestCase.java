@@ -38,12 +38,27 @@ public class CategoryTestCase {
 	 * }
 	 */ 
 	 
-	@Test
+	/*@Test
 	public void testGetCategory() {
 
 		category = categoryDAO.get(2);
 		assertEquals("Successfully fetched a single category from table!!"," Mobile", category.getName());
 
 	}
+*/
+	
+	
+	
+	
+	 @Test public void testUpdateCategory() {
+	 
+	 category = categoryDAO.get(3);
+	 category.setName("TV");
+	 
+	 assertEquals("Successfully updated a single category in table!!",true,
+	 categoryDAO.update(category));
+	 
+	 }
+	 
 
 }
