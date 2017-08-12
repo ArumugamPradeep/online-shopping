@@ -27,14 +27,22 @@ public class CategoryTestCase {
 
 	}
 
+	/*
+	 * @Test public void testAddCategory() { category = new Category();
+	 * category.setName(" Television"); category.setDescription("description");
+	 * category.setImageURL("CAT_103.png");
+	 * 
+	 * assertEquals ("Successfully added category inside table!!", true,
+	 * categoryDAO.add(category));
+	 * 
+	 * }
+	 */ 
+	 
 	@Test
-	public void testAddCategory() {
-		category = new Category();
-		category.setName("Laptop");
-		category.setDescription("description");
-		category.setImageURL("CAT_105.png");
+	public void testGetCategory() {
 
-		assertEquals ("Successfully added category inside table!!", true, categoryDAO.add(category));
+		category = categoryDAO.get(2);
+		assertEquals("Successfully fetched a single category from table!!"," Mobile", category.getName());
 
 	}
 
