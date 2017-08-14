@@ -26,6 +26,9 @@
 
 <script>
 	window.menu = ' ${title}';
+	
+	window.contextRoot = '${contextRoot}';
+	
 </script>
 
 <!-- Bootstrap Core CSS -->
