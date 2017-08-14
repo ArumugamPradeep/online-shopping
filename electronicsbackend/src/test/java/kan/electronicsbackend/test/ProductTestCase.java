@@ -1,6 +1,7 @@
 package kan.electronicsbackend.test;
 
 import static org.junit.Assert.assertEquals;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -24,7 +25,7 @@ public class ProductTestCase {
 
 	}
 
-	@Test
+	/*@Test
 	public void testCRUDCategory() {
          //ADD
 		// create operation
@@ -53,6 +54,38 @@ public class ProductTestCase {
 		  assertEquals("Something went wrong while fetching the list of products",6, productDAO.list().size()); 
 					
 	}
+*/
+	
+	@Test
+	public void testListActiveProducts() {
+		assertEquals("Something went wrong while fetching the list of products!",
+				5,productDAO.listAciveProducts().size());
+		
+	}
+
+	
+	@Test
+	public void testListActiveProductsByCategory() {
+		
+		assertEquals("Something went wrong while fetching the list of products!",3,productDAO.listAciveProductsByCategory(3).size());
+		
+		assertEquals("Something went wrong while fetching the list of products!",
+				2,productDAO.listAciveProductsByCategory(1).size());
+		
+		
+		
+	}
+
+	@Test
+	public void testGetLatestActiveProduct() {
+		
+		assertEquals("Something went wrong while fetching the list of products!",
+				3,productDAO.getLatestAciveProducts(3).size());
+		
+	
+	
+	}
+		
 
 
 }
